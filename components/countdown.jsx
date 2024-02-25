@@ -47,14 +47,7 @@ const Contador = () => {
     return (
       <div className="">
 
-        {partyTime ? (
-          <>
-            <h1>Happy new year!</h1>
-            <video autoPlay loop muted>
-              <source src="/party.mp4" />
-            </video>
-          </>
-        ) : (
+       
           <>
             <div className="timer-wrapper">
               <div className="timer-inner">
@@ -81,7 +74,7 @@ const Contador = () => {
             </div>
 
           </>
-        )}
+
       </div>
     );
   };
