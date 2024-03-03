@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Menu from "@/components/menu";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,24 +14,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className=" relative">
       <body className={inter.className}>
-          <div className="bg-primary">
-        <div class=" container mx-auto w-auto h-auto -z-10 overflow-x-clip bg-primary">
-          <Image
-            aria-hidden="true"
-            src="/textura/textura-2.png"
-            className=" md:scale-125 lg:scale-100 lg:left-0 top-0 opacity-25 transform-gpu  brightness-0 dark:brightness-200
-          animate-fade-in animate-duration-500 z-10"
-            layout="fill"
-            
-
-          
-            alt="Focos de luz"
-          />
-          
-        </div>
-          {children}
-          
+        <div className="bg-primary">
+        <Menu />
+          <div class=" container  w-auto h-auto z-0  bg-primary">
+            <Image
+              aria-hidden="true"
+              src="/textura/textura-2.png"
+              className="   top-0 opacity-25  z-10 "
+              layout="fill"
+              alt="Focos de luz"
+            />
           </div>
+          {children}
+        </div>
       </body>
     </html>
   );
